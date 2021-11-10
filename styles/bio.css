@@ -6,6 +6,7 @@
 body {
   margin: 0;
 }
+
 ul {
   text-decoration: none;
 }
@@ -17,7 +18,8 @@ ul {
 .container-header__wordmark {
   justify-content: center;
 }
+
 .container-header__navbar {
   display: flex;
   text-decoration: none;
-}
+} /*# sourceMappingURL=bio.css.map */
