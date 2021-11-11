@@ -31,7 +31,11 @@ a {
 }
 
 @mixin container-padding {
-  padding: 0 4%;
+  padding: 5%;
+}
+
+@mixin footer-padding {
+  padding-top: 5%;
 }
 
 .container-header {
@@ -74,7 +78,11 @@ a {
 }
 
 .container-bio__heading {
-  padding: 8% 0 5% 0;
+  padding: 5% 0;
+}
+
+.container-bio__sub-heading {
+  padding: 5% 0;
 }
 
 .container-bio__image {
@@ -85,4 +93,37 @@ a {
 .container-bio__quote--bold {
   font-family: AvenirNextLTPro-Bold;
   src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+}
+
+.container-photo-gallery {
+  @include container-padding();
+  background-color: lightgrey;
+}
+
+.container-photo-gallery__heading {
+  padding: 5% 0;
+}
+
+.container-photo-gallery__photo {
+  @include images();
+  padding: 2% 0;
+}
+
+.container-footer {
+  height: 200px;
+}
+.container-footer__company-name {
+  @include footer-padding();
+}
+
+.container-footer__company-address {
+  @include footer-padding();
+}
+
+.container-footer__company-discription {
+  @include footer-padding();
+}
+
+.container-footer__company-email {
+  @include footer-padding();
 }
