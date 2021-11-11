@@ -6,18 +6,24 @@
 body {
   margin: 0;
 }
-ul {
+a {
   text-decoration: none;
+  list-style-type: none;
 }
 
 .container-header {
-  display: flex;
+  width: 100vw;
+  background-color: black;
+  color: #ffffff;
 }
 
 .container-header__wordmark {
+  display: flex;
   justify-content: center;
+  color: #ffffff;
 }
 .container-header__navbar {
   display: flex;
-  text-decoration: none;
+  justify-content: center;
+  color: #ffffff;
 }
