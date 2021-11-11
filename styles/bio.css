@@ -1,31 +1,76 @@
 * {
   margin: 0;
-  padding: 0;
 }
 
+@font-face {
+  font-family: AvenirNextLTPro-Regular;
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf);
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+  src: url(../assets/fonts/AvenirNextLTPro.ttf);
+}
 body {
-  margin: 0;
+  font-family: AvenirNextlTPro-Regular;
 }
 
 a {
   text-decoration: none;
   list-style-type: none;
+  color: #ffffff;
 }
 
 .container-header {
   width: 100vw;
-  background-color: black;
-  color: #ffffff;
+  height: 50%;
+  background-color: #666666;
 }
 
 .container-header__wordmark {
+  font-family: AvenirNextlTPro-Regular;
+  color: #ffffff;
   display: flex;
   justify-content: center;
-  color: #ffffff;
 }
 
 .container-header__navbar {
-  display: flex;
-  justify-content: center;
+  font-family: AvenirNextlTPro-Regular;
   color: #ffffff;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5% 0;
+}
+
+.container-hero {
+  display: flex;
+  align-items: center;
+}
+
+.container-hero__image {
+  width: 100%;
+}
+
+.container-hero__band-name {
+  position: absolute;
+  font-family: AvenirNextlTPro-Regular;
+  color: #ffffff;
+  display: flex;
+  padding: 0 4%;
+}
+
+.container-bio {
+  padding: 0 4%;
+}
+
+.container-bio__heading {
+  padding: 8% 0 5% 0;
+}
+
+.container-bio__image {
+  width: 100%;
+  padding: 0 0 5% 0;
+}
+
+.container-bio__quote--bold {
+  font-family: AvenirNextLTPro-Bold;
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
 }/*# sourceMappingURL=bio.css.map */
