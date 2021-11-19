@@ -3,14 +3,22 @@
 }
 
 @font-face {
-  font-family: AvenirNextLTPro-Regular;
+  font-family: "AvenirNextLTPro-Regular";
   src: url(../assets/fonts/AvenirNextLTPro-Regular.otf);
-  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
-  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
   src: url(../assets/fonts/AvenirNextLTPro.ttf);
+}
+@font-face {
+  font-family: "AvenirNextLTPro-Bold";
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+  font-family: "AvenirNextLTPro-Demi";
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
 }
 body {
   font-family: AvenirNextlTPro-Regular;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -22,7 +30,7 @@ a {
 .container-header {
   width: 100vw;
   height: 50%;
-  background-color: #666666;
+  background-color: #323232;
 }
 
 .container-header__wordmark {
@@ -75,17 +83,18 @@ a {
 }
 
 .container-bio__quote--bold {
-  font-family: AvenirNextLTPro-Bold;
-  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-family: "AvenirNextLTPro-Demi";
+  font-size: 14px;
 }
 
 .container-photo-gallery {
   padding: 5%;
-  background-color: lightgrey;
+  background-color: #fafafa;
 }
 
 .container-photo-gallery__heading {
   padding: 5% 0;
+  font-family: "AvenirNextLTPro-Demi";
 }
 
 .container-photo-gallery__photo {
@@ -94,21 +103,57 @@ a {
 }
 
 .container-footer {
-  height: 200px;
+  background-color: #323232;
+  font-family: AvenirNextlTPro-Regular;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 5%;
+}
+
+.container-footer__heading {
+  font-family: "AvenirNextLTPro-Demi";
+}
+
+.container-footer__social {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+footer ul a li {
+  width: 60px;
+  padding-top: 20px;
+}
+
+.container-footer__social-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 20%;
+}
+
+.container-footer__company-info--spacing {
+  padding-top: 10%;
 }
 
 .container-footer__company-name {
-  padding-top: 5%;
+  font-family: "AvenirNextLTPro-Demi";
 }
 
-.container-footer__company-address {
-  padding-top: 5%;
+.container-footer__wordmark {
+  font-family: AvenirNextlTPro-Regular;
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20%;
 }
 
-.container-footer__company-discription {
+.container-footer__copyright {
   padding-top: 5%;
+  font-size: 0.8rem;
 }
 
-.container-footer__company-email {
-  padding-top: 5%;
+@media (min-width: 768px) {
+  .container-photo-gallery {
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=bio.css.map */

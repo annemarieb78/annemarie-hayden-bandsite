@@ -3,11 +3,19 @@
 }
 
 @font-face {
-  font-family: AvenirNextLTPro-Regular;
+  font-family: "AvenirNextLTPro-Regular";
   src: url(../assets/fonts/AvenirNextLTPro-Regular.otf);
-  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
-  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
   src: url(../assets/fonts/AvenirNextLTPro.ttf);
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro-Bold";
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro-Demi";
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
 }
 
 @mixin main-font {
@@ -16,6 +24,8 @@
 
 body {
   @include main-font();
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -30,18 +40,24 @@ a {
   display: flex;
 }
 
+@mixin footer-style {
+  @include main-font();
+  color: #ffffff;
+  font-size: 13px;
+}
+
 @mixin container-padding {
   padding: 5%;
 }
 
 @mixin footer-padding {
-  padding-top: 5%;
+  padding-top: 10%;
 }
 
 .container-header {
   width: 100vw;
   height: 50%;
-  background-color: #666666;
+  background-color: #323232;
 }
 
 .container-header__wordmark {
@@ -91,17 +107,18 @@ a {
 }
 
 .container-bio__quote--bold {
-  font-family: AvenirNextLTPro-Bold;
-  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-family: "AvenirNextLTPro-Demi";
+  font-size: 14px;
 }
 
 .container-photo-gallery {
   @include container-padding();
-  background-color: lightgrey;
+  background-color: #fafafa;
 }
 
 .container-photo-gallery__heading {
   padding: 5% 0;
+  font-family: "AvenirNextLTPro-Demi";
 }
 
 .container-photo-gallery__photo {
@@ -110,20 +127,52 @@ a {
 }
 
 .container-footer {
-  height: 200px;
+  background-color: #323232;
+  @include footer-style();
+  @include container-padding();
 }
+
+.container-footer__heading {
+  font-family: "AvenirNextLTPro-Demi";
+}
+.container-footer__social {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+footer ul a li {
+  width: 60px;
+  padding-top: 20px;
+}
+
+.container-footer__social-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 20%;
+}
+
+.container-footer__company-info--spacing {
+  @include footer-padding();
+}
+
 .container-footer__company-name {
-  @include footer-padding();
+  font-family: "AvenirNextLTPro-Demi";
 }
 
-.container-footer__company-address {
-  @include footer-padding();
+.container-footer__wordmark {
+  @include header-style();
+  justify-content: flex-start;
+  padding-top: 20%;
 }
 
-.container-footer__company-discription {
-  @include footer-padding();
+.container-footer__copyright {
+  padding-top: 5%;
+  font-size: 0.8rem;
 }
 
-.container-footer__company-email {
-  @include footer-padding();
+@media (min-width: 768px) {
+  .container-photo-gallery {
+    flex-wrap: wrap;
+  }
 }
