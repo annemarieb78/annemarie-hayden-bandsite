@@ -64,11 +64,11 @@ a {
   font-family: AvenirNextlTPro-Regular;
   color: #ffffff;
   display: flex;
-  padding: 5% 1% 5% 5%;
+  padding: 5%;
 }
 
 .container-bio {
-  padding: 5% 1% 5% 5%;
+  padding: 5%;
 }
 
 .container-bio__heading {
@@ -103,7 +103,7 @@ a {
 }
 
 .container-photo-gallery {
-  padding: 5% 1% 5% 5%;
+  padding: 5%;
   background-color: #fafafa;
 }
 
@@ -122,7 +122,7 @@ a {
   font-family: AvenirNextlTPro-Regular;
   color: #ffffff;
   font-size: 13px;
-  padding: 5% 1% 5% 5%;
+  padding: 5%;
   display: flex;
   flex-direction: column;
 }
@@ -160,7 +160,6 @@ footer ul a li {
   font-family: AvenirNextlTPro-Regular;
   color: #ffffff;
   display: flex;
-  justify-content: flex-start;
   padding-top: 20%;
 }
 
@@ -249,25 +248,31 @@ footer ul a li {
     display: flex;
     flex-direction: row;
     height: 15%;
-    width: 50%;
+    font-size: 42px;
   }
 
   .container-footer__social {
     display: flex;
     flex-direction: row;
     height: 15%;
-    width: 50%;
+    padding-left: 10%;
+    padding-right: 17%;
+  }
+
+  .container-footer__companies {
+    width: 100%;
+    position: absolute;
+    background-color: #323232;
+    top: 90%;
+    left: -0.01%;
+    padding-bottom: 10%;
   }
 
   .container-footer__company-info {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    position: absolute;
-    top: 90%;
-    background-color: #323232;
+    justify-content: space-around;
     font-size: 1rem;
   }
 
@@ -282,19 +287,18 @@ footer ul a li {
   }
 
   .container-footer__wordmark {
-    font-family: AvenirNextlTPro-Regular;
-    color: #ffffff;
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 20%;
+    font-size: 34px;
   }
 
   .container-footer__copyright {
     position: absolute;
     top: 210%;
+    left: 0.01%;
+    right: -0.01%;
     background-color: #323232;
     width: 100vw;
-    margin: 0%;
+    padding-bottom: 5%;
+    padding-left: 5%;
   }
 }
 @media (min-width: 1280px) {
