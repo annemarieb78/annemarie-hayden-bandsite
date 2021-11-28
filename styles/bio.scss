@@ -60,6 +60,29 @@ a {
   width: 100%;
 }
 
+@mixin logo-size {
+  max-width: 120px;
+  max-height: 20px;
+}
+
+@mixin comment-button {
+  background-color: #323232;
+  color: #ffffff;
+  height: 40px;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+@mixin page-section-header {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+/*@mixin comment-button: hover {
+  background-color: #000000;
+}*/
+
 .container-header {
   width: 100vw;
   height: 50%;
@@ -156,6 +179,18 @@ a {
 .container-photo-gallery__photo {
   @include images();
   padding: 2% 0;
+}
+
+.container-comment {
+  display: flex;
+}
+
+.container-comment__button--style {
+  @include comment-button();
+}
+
+.container-comment__heading {
+  @include page-section-header();
 }
 
 .container-footer {
@@ -323,7 +358,6 @@ footer ul a li {
     top: 250%;
     left: 0.01%;
     background-color: #323232;
-
     padding-bottom: 5%;
     padding-left: 5%;
   }
