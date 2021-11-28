@@ -2,6 +2,20 @@
   margin: 0;
 }
 
+body {
+  @include main-font();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #ffffff;
+}
+
 @font-face {
   font-family: "AvenirNextLTPro-Regular";
   src: url(../assets/fonts/AvenirNextLTPro-Regular.otf);
@@ -20,20 +34,6 @@
 
 @mixin main-font {
   font-family: AvenirNextlTPro-Regular;
-}
-
-body {
-  @include main-font();
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100vw;
-}
-
-a {
-  text-decoration: none;
-  list-style-type: none;
-  color: #ffffff;
 }
 
 @mixin header-style {
@@ -65,23 +65,95 @@ a {
   max-height: 20px;
 }
 
-@mixin comment-button {
-  background-color: #323232;
-  color: #ffffff;
-  height: 40px;
-  border-radius: 4px;
-  justify-content: center;
-}
+/*@mixin comment-button: hover {
+  background-color: #000000;
+}*/
 
-@mixin page-section-header {
+@mixin mobile-page-section-header {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
 }
 
-/*@mixin comment-button: hover {
-  background-color: #000000;
-}*/
+@mixin mobile-subheader {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+@mixin mobile-body-footer-copy {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+@mixin mobile-comment-button {
+  background-color: #323232;
+  color: #ffffff;
+  height: 40px;
+  width: 100%;
+  border-radius: 4px;
+  justify-content: center;
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+@mixin mobile-form-field {
+  min-height: 36px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 12px;
+  border: 1px solid #e1e1e1;
+  margin-top: 4px;
+}
+
+@mixin desktop-page-header {
+  font-size: 60px;
+  line-height: 68px;
+  font-weight: 700;
+}
+
+@mixin desktop-section-header {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+}
+
+@mixin desktop-subheader {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+@mixin desktop-body-copy {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+@mixin desktop-footer-copy {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin desktop-comment-button {
+  min-width: 150px;
+  padding: 0 32px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+@mixin desktop-form-field {
+  min-height: 48px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 16px;
+  border: 1px solid #e1e1e1;
+  margin-top: 4px;
+}
 
 .container-header {
   width: 100vw;
@@ -183,6 +255,15 @@ a {
 
 .container-comment {
   display: flex;
+  width: 100vw;
+}
+
+.container-comment__fields {
+  flex-direction: column;
+}
+
+.container-comment__button {
+  @include comment-button();
 }
 
 .container-comment__button--style {
@@ -190,7 +271,7 @@ a {
 }
 
 .container-comment__heading {
-  @include page-section-header();
+  @include mobile-page-section-header();
 }
 
 .container-footer {
