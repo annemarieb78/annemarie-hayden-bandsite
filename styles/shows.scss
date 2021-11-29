@@ -4,9 +4,8 @@
 
 hr {
   border: 0;
-  border-top: 1px solid #e1e1e1;
-  padding: 24px 16px 16px 16px;
-  width: 80%;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 16px;
   justify-content: center;
 }
 
@@ -221,14 +220,42 @@ a {
   @include container-padding();
   display: flex;
   flex-direction: column;
+  padding-bottom: 24px;
 }
 
 .container-shows__heading {
   padding: 24px 0 16px 0;
+  @include mobile-page-section-header();
 }
 
-.container-bio__sub-heading {
-  padding: 5% 0 0 0;
+.container-shows__dates-locations--desktop-heading {
+  display: none;
+}
+
+.container-shows__dates-locations {
+  padding: 0;
+}
+
+.container-shows__info-type {
+  @include mobile-subheader();
+  color: #afafaf;
+  padding: 16px 0 8px 0;
+}
+
+.container-shows__info-date {
+  font-weight: 700;
+}
+
+.container-shows__info-location {
+  padding-bottom: 16px;
+}
+
+.container-shows__buy-tickets {
+  padding: 16px;
+  color: #ffffff;
+  background-color: #323232;
+  font-size: 18px;
+  border-radius: 4px;
 }
 
 .container-footer {
@@ -237,11 +264,13 @@ a {
   @include container-padding();
   display: flex;
   flex-direction: column;
+  padding: 24px;
 }
 
 .container-footer__heading {
   font-family: "AvenirNextLTPro-Demi";
 }
+
 .container-footer__social {
   display: flex;
   justify-content: flex-start;
@@ -305,43 +334,49 @@ footer ul a li {
     width: 30%;
     font-size: 1.5rem;
   }
-  .container-hero {
+  .container-shows__heading {
+    padding: 24px 0 16px 0;
+    @include mobile-page-section-header();
+  }
+  .container-shows__dates-locations--desktop-heading {
+    padding: 0;
     display: flex;
-    align-items: center;
-  }
-  .container-hero__band-name {
-    font-size: 5rem;
-    font-weight: 800;
-  }
-  .container-bio__bio-text {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .container-bio__bio-text--para1 {
-    width: 45%;
-  }
-  .container-bio__bio-text--para2 {
-    width: 45%;
-  }
-  .container-photo-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 24px 16px;
-    position: relative;
-  }
-  .container-photo-gallery__heading {
-    position: absolute;
     justify-content: flex-start;
-    padding: 5%;
+    color: #afafaf;
+    width: 80%;
   }
-  .container-photo-gallery__photos--position {
-    padding-top: 10%;
+  .container-shows__desktop-info-type {
+    width: 100%;
   }
-  .container-photo-gallery__photo {
-    width: 25%;
-    padding-left: 5%;
+  .container-shows__desktop-display {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
   }
+  .container-shows__dates-locations {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    width: 80%;
+  }
+  .container-shows__info-type {
+    display: none;
+  }
+  .container-shows__info-date {
+    font-weight: 700;
+  }
+  .container-shows__info-location {
+    padding-bottom: 16px;
+  }
+  .container-shows__buy-tickets {
+    padding: 16px;
+    color: #ffffff;
+    background-color: #323232;
+    font-size: 18px;
+    border-radius: 4px;
+    flex-direction: row;
+  }
+
   .container-footer {
     display: flex;
     flex-direction: row;
@@ -410,20 +445,7 @@ footer ul a li {
     width: 70%;
     padding-left: 15%;
   }
-  .container-bio__quote--bold {
-    padding: 0 15%;
-    font-size: 24px;
-  }
-  .container-bio__sub-heading {
-    padding: 24px 15% 0 15%;
-    font-size: 24px;
-  }
-  .container-bio__bio-text {
-    padding: 0 15%;
-  }
-  .container-photo-gallery__heading {
-    font-size: 36px;
-  }
+
   .container-footer {
     display: flex;
     flex-direction: row;
