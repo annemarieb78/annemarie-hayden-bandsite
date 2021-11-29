@@ -5,9 +5,9 @@
 hr {
   border: 0;
   border-top: 1px solid #e1e1e1;
-  padding: 16px;
-  width: 80%;
-  justify-content: center;
+  padding: 16px 0;
+  margin-right: 16px;
+  margin-left: 16px;
 }
 
 @font-face {
@@ -40,10 +40,6 @@ a {
 /*@mixin comment-button: hover {
   background-color: #000000;
 }*/
-.container-comment {
-  display: flex;
-}
-
 .container-header {
   width: 100vw;
   height: 50%;
@@ -94,11 +90,11 @@ a {
   font-family: AvenirNextlTPro-Regular;
   color: #ffffff;
   display: flex;
-  padding: 0 5%;
+  padding: 16px;
 }
 
 .container-bio {
-  padding: 0 5%;
+  padding: 16px;
   display: flex;
   flex-direction: column;
 }
@@ -135,7 +131,7 @@ a {
 }
 
 .container-photo-gallery {
-  padding: 0 5%;
+  padding: 16px;
   background-color: #fafafa;
 }
 
@@ -151,7 +147,7 @@ a {
 
 .container-comment {
   display: flex;
-  padding: 0 5%;
+  padding: 0 16px;
 }
 
 .container-comment__heading {
@@ -178,7 +174,7 @@ a {
 }
 
 .container-comment__label {
-  color: #e1e1e1;
+  color: #afafaf;
 }
 
 .container-comment__button--style {
@@ -220,7 +216,7 @@ input[type=submit] {
   font-family: AvenirNextlTPro-Regular;
   color: #ffffff;
   font-size: 13px;
-  padding: 0 5%;
+  padding: 16px;
   display: flex;
   flex-direction: column;
 }
@@ -262,7 +258,7 @@ footer ul a li {
 }
 
 .container-footer__copyright {
-  padding-top: 5%;
+  padding-top: 16px;
   font-size: 0.8rem;
 }
 
@@ -359,7 +355,7 @@ footer ul a li {
     height: 15%;
     width: 30%;
     padding-left: 2%;
-    font-size: 42px;
+    font-size: 36px;
   }
 
   .container-footer__social {
@@ -404,11 +400,10 @@ footer ul a li {
 
   .container-footer__copyright {
     position: absolute;
-    top: 250%;
+    top: 300px;
     left: 0.01%;
     background-color: #323232;
-    padding-bottom: 5%;
-    padding-left: 5%;
+    padding: 0 0 0 16px;
   }
 }
 @media (min-width: 1280px) {
@@ -488,11 +483,6 @@ footer ul a li {
 
   .container-footer__copyright {
     position: absolute;
-    top: 350%;
-    left: 0.01%;
-    background-color: #323232;
-    width: 100%;
-    padding-bottom: 5%;
-    padding-left: 7%;
+    top: 350px;
   }
 }/*# sourceMappingURL=bio.css.map */
