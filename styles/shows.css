@@ -124,6 +124,11 @@ a {
   font-weight: 700;
 }
 
+.container-hero__soundcloud {
+  position: absolute;
+  background-color: #e1e1e1;
+}
+
 .container-shows {
   padding: 16px;
   display: flex;
@@ -155,11 +160,17 @@ a {
 }
 
 .container-shows__info-date {
+  width: 100%;
   font-weight: 700;
+}
+
+.container-shows__info-venue {
+  width: 100%;
 }
 
 .container-shows__info-location {
   padding-bottom: 16px;
+  width: 100%;
 }
 
 .container-shows__buy-tickets {
@@ -255,10 +266,46 @@ footer ul a li {
     font-size: 1.5rem;
   }
 
-  .container-shows__heading {
-    padding: 24px 0 16px 0;
+  .container-hero__album-name {
+    position: absolute;
+    top: 30%;
     font-size: 24px;
     line-height: 32px;
+    font-weight: 600;
+    font-family: AvenirNextlTPro-Regular;
+    color: #ffffff;
+    display: flex;
+    padding: 16px;
+  }
+
+  .container-hero__album {
+    position: absolute;
+    top: 40%;
+    font-family: AvenirNextlTPro-Regular;
+    color: #ffffff;
+    display: flex;
+    padding: 16px;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+
+  .container-hero__song {
+    position: absolute;
+    top: 50%;
+    font-family: AvenirNextlTPro-Regular;
+    color: #ffffff;
+    display: flex;
+    padding: 16px;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+
+  .container-shows__heading {
+    padding: 24px 0 16px 0;
+    font-size: 36px;
+    line-height: 44px;
     font-weight: 700;
   }
 
@@ -278,6 +325,7 @@ footer ul a li {
     display: flex;
     justify-content: space-between;
     padding-top: 24px;
+    align-items: flex-end;
   }
 
   .container-shows__dates-locations {
@@ -373,17 +421,6 @@ footer ul a li {
   }
 }
 @media (min-width: 1280px) {
-  .container-bio__heading {
-    font-size: 36px;
-    padding: 48px 0 36px 0;
-    padding-left: 15%;
-  }
-
-  .container-bio__image {
-    width: 70%;
-    padding-left: 15%;
-  }
-
   .container-footer {
     display: flex;
     flex-direction: row;
