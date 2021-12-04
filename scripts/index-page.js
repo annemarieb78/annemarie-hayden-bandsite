@@ -9,9 +9,9 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 });*/
 
-document.querySelector("section");
-const sectionElement = document.queryselector("section");
-const showsHeader = document.createElement("h2");
-sectionElement.appendChild("showsHeader");
+const sectionElement = document.querySelector("section");
+const h2Element = document.createElement("h2");
+h2Element.classList.add("container-shows__heading");
+sectionElement.appendChild(h2Element);
 
-sectionElement.appendChild(document.createElement("h2"));
+/*sectionElement.appendChild(document.createElement("h2"));*/

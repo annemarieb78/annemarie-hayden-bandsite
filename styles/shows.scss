@@ -201,7 +201,11 @@ a {
 
 .container-hero__soundcloud {
   position: absolute;
-  background-color: #e1e1e1;
+  top: 40%;
+  height: 20%;
+  width: 93%;
+  align-items: center;
+  @include container-padding();
 }
 
 .container-shows {
@@ -336,17 +340,24 @@ footer ul a li {
   }
   .container-hero__album {
     position: absolute;
-    top: 40%;
+    top: 35%;
     @include header-style();
     @include container-padding();
     @include desktop-section-header();
   }
   .container-hero__song {
     position: absolute;
-    top: 50%;
+    top: 40%;
     @include header-style();
     @include container-padding();
     @include desktop-section-header();
+  }
+  .container-hero__soundcloud {
+    position: absolute;
+    top: 50%;
+    height: 15%;
+    width: 50%;
+    @include container-padding();
   }
   .container-shows__heading {
     padding: 24px 0 16px 0;
