@@ -1,10 +1,5 @@
 const sectionElement = document.querySelector("section");
 
-const h2Element = document.createElement("h2");
-h2Element.classList.add("container-shows__heading");
-h2Element.innerText = "Shows";
-sectionElement.appendChild(h2Element);
-
 let showsArray = [
   {
     date: "Mon Sept 06 2021",
@@ -38,68 +33,6 @@ let showsArray = [
   },
 ];
 
-// const ulDesktopHeading = document.createElement("ul");
-// ulDesktopHeading.classList.add(
-//   "container-shows__dates-locations--desktop-heading"
-// );
-// sectionElement.appendChild(ulDesktopHeading);
-
-// headerList.forEach((x) => {
-//   const liDesktopHeading = document.createElement("li");
-//   liDesktopHeading.classList.add("container-shows__desktop-info-type");
-//   liDesktopHeading.innerText = x;
-//   document
-//     .querySelector(".container-shows__dates-locations--desktop-heading")
-//     .appendChild(liDesktopHeading);
-// });
-
-// const divElement = document.createElement("div");
-// divElement.classList.add("container-shows__desktop-display");
-// sectionElement.appendChild(divElement);
-
-// headerList.forEach((x) => {
-//   const liMobileHeading = document.createElement("li");
-//   liMobileHeading.classList.add("container-shows__desktop-info-type");
-//   liMobileHeading.innerText = x;
-//   document
-//     .querySelector(".container-shows__dates-locations-" + i)
-//     .appendChild(liMobileHeading);
-// });
-
-// dateList.forEach((x, i) => {
-//   const liDateList = document.createElement("li");
-//   liDateList.classList.add("container-shows__info-type");
-//   liDateList.innerText = x;
-//   document
-//     .querySelector(".container-shows__dates-locations-" + i)
-//     .appendChild(liDateList);
-// });
-
-// venueList.forEach((x, i) => {
-//   const liVenueList = document.createElement("li");
-//   liVenueList.classList.add("container-shows__info-type");
-//   liVenueList.innerText = x;
-//   document
-//     .querySelector(".container-shows__dates-locations-" + i)
-//     .appendChild(liVenueList);
-// });
-
-/*const ulDesktopHeading = document.createElement("ul");
-ulDesktopHeading.classList.add(
-  "container-shows__dates-locations--desktop-heading"
-);
-sectionElement.appendChild(ulDesktopHeading);
-
-const liElement = document.createElement("li");
-liElement.classList.add("container-shows__desktop-info-type");
-liElement.innerText = "DATE";
-let liText = liElement.innerText;
-ulElement.appendChild(liElement);
-
-const ulMobileDates1 = document.createElement("ul");
-ulMobileDates1.classList.add("container-shows__dates-locations");
-divElement.appendChild(ulMobileDates1);*/
-
 showsArray.forEach((show) => {
   const divShowsElement = document.createElement("div");
   divShowsElement.classList.add("container-shows__desktop-display");
@@ -110,7 +43,7 @@ showsArray.forEach((show) => {
   liDate.innerText = "DATE";
   const liDateInfo = document.createElement("li");
   liDateInfo.classList.add("container-shows__info-date");
-  liDate.innerText = show.date;
+  liDateInfo.innerText = show.date;
   const liVenue = document.createElement("li");
   liVenue.classList.add("container-shows__info-type");
   liVenue.innerText = "VENUE";
@@ -126,6 +59,8 @@ showsArray.forEach((show) => {
   const buyTixButton = document.createElement("button");
   buyTixButton.classList.add("container-shows__buy-tickets");
   buyTixButton.innerText = "Buy Tickets";
+  const dividerLine = document.createElement("hr");
+  sectionElement.appendChild(dividerLine);
 
   divShowsElement.appendChild(ulDatesLocations);
   ulDatesLocations.appendChild(liDate);

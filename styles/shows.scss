@@ -5,8 +5,7 @@
 hr {
   border: 0;
   border-bottom: 1px solid #e1e1e1;
-  padding: 16px;
-  justify-content: center;
+  padding: 8px;
 }
 
 ul li {
@@ -137,9 +136,7 @@ a {
 
 @mixin container-shows__dates-locations {
   display: flex;
-  justify-content: flex-start;
-  padding: 0;
-  width: 80%;
+  width: 70%;
 }
 
 .container-header {
@@ -266,6 +263,7 @@ a {
   background-color: #323232;
   font-size: 18px;
   border-radius: 4px;
+  border: none;
 }
 
 .container-footer {
@@ -352,23 +350,23 @@ footer ul a li {
   }
   .container-hero__album {
     position: absolute;
-    top: 35%;
-    @include header-style();
-    @include container-padding();
-    @include desktop-section-header();
-  }
-  .container-hero__song {
-    position: absolute;
     top: 40%;
     @include header-style();
     @include container-padding();
-    @include desktop-section-header();
+    @include desktop-page-header();
+  }
+  .container-hero__song {
+    position: absolute;
+    top: 50%;
+    @include header-style();
+    @include container-padding();
+    @include desktop-page-header();
   }
   .container-hero__soundcloud {
     position: absolute;
-    top: 50%;
+    top: 70%;
     height: 15%;
-    width: 50%;
+    width: 70%;
     @include container-padding();
   }
   .container-shows__heading {
@@ -376,11 +374,11 @@ footer ul a li {
     @include desktop-section-header();
   }
   .container-shows__dates-locations--desktop-heading {
-    padding: 0;
+    padding: 24px 0 16px 0;
     display: flex;
     justify-content: flex-start;
     color: #afafaf;
-    width: 80%;
+    width: 70%;
   }
   .container-shows__desktop-info-type {
     width: 100%;
@@ -388,11 +386,13 @@ footer ul a li {
   .container-shows__desktop-display {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 24px;
-    align-items: flex-end;
+    flex-direction: row;
   }
   .container-shows__dates-locations {
     @include container-shows__dates-locations();
+    align-items: center;
   }
   .container-shows__info-type {
     display: none;
@@ -401,15 +401,17 @@ footer ul a li {
     font-weight: 700;
   }
   .container-shows__info-location {
-    padding-bottom: 16px;
+    padding-bottom: 0;
   }
   .container-shows__buy-tickets {
-    padding: 16px;
+    padding: 16px 24px;
     color: #ffffff;
     background-color: #323232;
     font-size: 18px;
     border-radius: 4px;
     flex-direction: row;
+    margin-right: 16px;
+    width: 25%;
   }
   .container-footer {
     display: flex;
