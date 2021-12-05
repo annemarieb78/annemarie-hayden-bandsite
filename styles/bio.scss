@@ -298,17 +298,23 @@ a {
   width: 70%;
 }
 
+.container-comment__dynamic-content {
+  width: 80%;
+  min-height: 36px;
+}
+
 input {
   @include main-font();
   @include mobile-form-field();
-  margin-bottom: 20px;
+  margin: 8px 0 24px 0;
   background-color: #fafafa;
 }
 
 textarea {
   @include main-font();
   @include mobile-form-field();
-  margin-bottom: 20px;
+  min-height: 72px;
+  margin: 8px 0 24px 0;
   background-color: #fafafa;
 }
 

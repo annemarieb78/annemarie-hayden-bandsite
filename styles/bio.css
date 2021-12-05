@@ -189,6 +189,11 @@ a {
   width: 70%;
 }
 
+.container-comment__dynamic-content {
+  width: 80%;
+  min-height: 36px;
+}
+
 input {
   font-family: AvenirNextlTPro-Regular;
   min-height: 36px;
@@ -196,7 +201,7 @@ input {
   padding: 12px;
   border: 1px solid #e1e1e1;
   margin-top: 4px;
-  margin-bottom: 20px;
+  margin: 8px 0 24px 0;
   background-color: #fafafa;
 }
 
@@ -207,7 +212,8 @@ textarea {
   padding: 12px;
   border: 1px solid #e1e1e1;
   margin-top: 4px;
-  margin-bottom: 20px;
+  min-height: 72px;
+  margin: 8px 0 24px 0;
   background-color: #fafafa;
 }
 
