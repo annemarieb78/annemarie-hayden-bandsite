@@ -151,6 +151,11 @@ a {
   display: none;
 }
 
+.container-shows__desktop-display {
+  display: flex;
+  flex-direction: column;
+}
+
 .container-shows__dates-locations {
   padding: 0;
 }

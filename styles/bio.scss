@@ -298,6 +298,13 @@ a {
   width: 70%;
 }
 
+input {
+  @include main-font();
+  @include mobile-form-field();
+  margin-bottom: 20px;
+  background-color: #fafafa;
+}
+
 textarea {
   @include main-font();
   @include mobile-form-field();

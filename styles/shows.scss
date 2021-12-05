@@ -135,6 +135,13 @@ a {
   font-weight: 400;
 }
 
+@mixin container-shows__dates-locations {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  width: 80%;
+}
+
 .container-header {
   width: 100vw;
   height: 50%;
@@ -222,6 +229,11 @@ a {
 
 .container-shows__dates-locations--desktop-heading {
   display: none;
+}
+
+.container-shows__desktop-display {
+  display: flex;
+  flex-direction: column;
 }
 
 .container-shows__dates-locations {
@@ -380,10 +392,7 @@ footer ul a li {
     align-items: flex-end;
   }
   .container-shows__dates-locations {
-    display: flex;
-    justify-content: flex-start;
-    padding: 0;
-    width: 80%;
+    @include container-shows__dates-locations();
   }
   .container-shows__info-type {
     display: none;

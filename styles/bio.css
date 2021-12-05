@@ -189,6 +189,17 @@ a {
   width: 70%;
 }
 
+input {
+  font-family: AvenirNextlTPro-Regular;
+  min-height: 36px;
+  border-radius: 4px;
+  padding: 12px;
+  border: 1px solid #e1e1e1;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+}
+
 textarea {
   font-family: AvenirNextlTPro-Regular;
   min-height: 36px;
