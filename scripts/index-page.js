@@ -2,16 +2,36 @@ const form = document.querySelector(".container-comment__fields");
 const commentContent = document.querySelector(
   "container-comment__dynamic-content"
 );
+const submitButton = document.querySelector(".container-comment__button-style");
+const formInput = [];
 
-form.addEventListener("click", function (event) {
+form.addEventListener("submit", function (event) {
   event.preventDefault();
-  const nameInput = event.target.nameInput.value;
-  const commentListItem = document.createElement("li");
-  commentListItem.innerText = nameInput;
-  container - comment__dynamic - commentContent.appendChild(commentListItem);
-  console.log("Form Submitted");
+  const nameInput = document.createElement("li");
+  const commentInput = document.createElement("li");
+  const clickButton = event.target.submitButton.value;
+
+  if (nameInput !== "" && commentInput !== "") {
+    formInput.push({
+      name: nameInput,
+      comment: commentInput,
+    });
+    renderInput();
+    event.target.reset();
+  } else {
+    alert("Please do not leave blank");
+  }
 });
 
-// form.addEventListener("keyup", (event) => {
-//   event.preventDefault();
-// });
+function renderInput() {
+  commentContent.innerHTML = "";
+  formInput.forEach(function (input) {
+    const nameLi = document.createElement("li");
+    nameLi.innerText = input.name;
+    const commentPara = document.createElement("p");
+    commentPara.innerText = input.comment;
+
+    commentContent.appendChild(nameLi);
+    commentContent.appendChild(commentPara);
+  });
+}
