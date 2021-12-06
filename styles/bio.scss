@@ -293,7 +293,7 @@ a {
   color: #afafaf;
 }
 
-.container-comment__button--style {
+.comment__button {
   @include mobile-comment-button();
   width: 70%;
 }

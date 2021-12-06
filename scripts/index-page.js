@@ -1,15 +1,21 @@
-const form = document.querySelector(".container-comment__fields");
+const form = document.querySelector("container-comment__fields");
 const commentContent = document.querySelector(
   "container-comment__dynamic-content"
 );
-const submitButton = document.querySelector(".container-comment__button-style");
+//const submitButton = document.querySelector(".container-comment__button-style");
 const formInput = [];
 
-form.addEventListener("submit", function (event) {
+function submitButton(event) {
+  console.log(event.target.value);
+}
+
+form.addEventListener("click", function (event) {
   event.preventDefault();
+  console.log(event.target.submit.value);
+
   const nameInput = document.createElement("li");
   const commentInput = document.createElement("li");
-  const clickButton = event.target.submitButton.value;
+  //const clickButton = event.target.submitButton.value;
 
   if (nameInput !== "" && commentInput !== "") {
     formInput.push({
@@ -24,7 +30,7 @@ form.addEventListener("submit", function (event) {
 });
 
 function renderInput() {
-  commentContent.innerHTML = "";
+  commentContent.innerHTML = commentContent.innerHTML = commentInput;
   formInput.forEach(function (input) {
     const nameLi = document.createElement("li");
     nameLi.innerText = input.name;

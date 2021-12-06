@@ -177,7 +177,7 @@ a {
   color: #afafaf;
 }
 
-.container-comment__button--style {
+.comment__button {
   background-color: #323232;
   color: #ffffff;
   height: 40px;
