@@ -187,8 +187,33 @@ a {
 }
 
 .container-comment__dynamic-content {
+  padding: 16px;
   width: 80%;
   min-height: 36px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-name {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #323232;
+  justify-content: center;
+}
+
+.comment-date {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #afafaf;
+}
+
+.comment-paragraph {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 input {
